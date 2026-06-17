@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <body style="background-color: #000;">
+     
+   
+      <button id="red">RED</button>
+      <button id="green">GREEN</button>
+      <button id="orange">ORANGE</button>
+      <button id="pink">PINK</button>
+      <button id="blue">BLUE</button>
+
+  
+     
+  </body>
+</head>
+<body>
+  
+
+
+<script>
+ 
+ function ClickHandler(color){
+
+  console.log(color)
+  return function(){
+  document.body.style.backgroundColor = `${color}`
+ }
+}
+
+
+ document.getElementById('orange').onclick = ClickHandler("orange")
+ document.getElementById('green').onclick = ClickHandler("green")
+ document.getElementById('blue').onclick = ClickHandler("blue")
+ document.getElementById('red').onclick = ClickHandler("red")
+ document.getElementById('pink').onclick = ClickHandler("pink")
+
+
+///// Closure is a Function that remembers and can access variables from it's lexical scoping even after the Outer Function has Finsihed Executing 
+</script>
+
+</body>
+<!-- <script>
+  
+    // function Outer(){
+    //    let a = "Ilhan"
+
+
+    //    function Inner(){
+        
+    //     console.log("from Inner Function ",a)
+         
+
+    //    }
+
+    //    function InnerTwo(){
+    //     console.log("From Inner Two Function " , a)
+    //    }
+
+    //    Inner()
+    //    InnerTwo() 
+       
+    //   }
+      
+    //   Outer()
+
+
+
+    function Outer (){
+      const name = "Mozilla"
+    
+      function displayname(){
+         let a = 4545
+        console.log(name)
+        console.log(a)
+
+        function displayname2(){
+          console.log("displayname2",name)
+          console.log("displayname2",a)
+        }
+       
+         return displayname2()
+    
+
+
+      }
+      console.log(displayname)
+
+    return displayname()
+     
+      
+
+     
+    }
+
+    Outer()
+      
+
+</script> -->
+
+  
+
+
+</html>
